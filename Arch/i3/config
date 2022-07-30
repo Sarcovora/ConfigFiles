@@ -216,9 +216,10 @@ exec_always picom
 # Startup the background
 # exec_always feh --bg-scale /home/ekuo/Wallpapers/luka-senica-m1MBGEk_-iM-unsplash.jpg
 exec_always feh --bg-scale /home/ekuo/Wallpapers/GreenImaginaryLandscape.jpg
+# exec_always feh --bg-scale /home/ekuo/Wallpapers/FishingVillage.jpg
 
 # Workspace layout
-workspace_layout tabbed
+# workspace_layout tabbed
 
 # Titlebar allignment
 title_align left
@@ -233,10 +234,11 @@ for_window [class=".*"] border pixel 0
 # smart_gaps on
 # gaps inner 10 gaps outer 10
 workspace "1:Terminals" gaps inner 10
+workspace "1:Terminals" gaps outer 10
 
 # Colors <colorclass> <border> <background> <text> <indicator> <child_border>
-# client.focused          #ed7168 #285577 #ffffff #2e9ef4   #285577
-# client.unfocused        #757171 #222222 #888888 #292d2e   #222222
+client.focused        #2A9D8F    #2A9D8F   #FFFFFF   #2e9ef4      #285577
+client.unfocused      #264653    #264653   #2A9D8F   #292d2e      #222222
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
