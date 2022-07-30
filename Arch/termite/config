@@ -8,6 +8,7 @@
 #clickable_url_ctrl = false
 #dynamic_title = true
 font = Monospace 16
+# font = Iosevka Fixed 16
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -61,7 +62,7 @@ scrollbar = off
 #background = #3f3f3f
 
 # 20% background transparency (requires a compositor)
-background = rgba(46, 52, 64, 0.7)
+background = rgba(46, 52, 64, 0.8)
 
 # If unset, will reverse foreground and background
 highlight = #2f2f2f

@@ -111,16 +111,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1. Terminals"
-set $ws2 "2. Browser"
+set $ws1 "1:Terminals"
+set $ws2 "2:Browser"
 set $ws3 "3"
 set $ws4 "4"
-set $ws5 "5. Nemo"
+set $ws5 "5:Nemo"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9. Communications"
-set $ws10 "10. Music"
+set $ws9 "9:Communications"
+set $ws10 "10:Music"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -205,6 +205,7 @@ bindsym $mod+r mode "resize"
 exec termite
 # exec google-chrome
 exec brave
+exec_always --no-startup-id bash ~/.config/polybar/launch.sh
 
 # Startup commands
 # bindsym $mod+f1 exec xrandr --output Virtual1 --mode 2560x1440
@@ -213,7 +214,8 @@ exec_always picom
 # exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 
 # Startup the background
-exec_always feh --bg-scale /home/ekuo/Wallpapers/luka-senica-m1MBGEk_-iM-unsplash.jpg
+# exec_always feh --bg-scale /home/ekuo/Wallpapers/luka-senica-m1MBGEk_-iM-unsplash.jpg
+exec_always feh --bg-scale /home/ekuo/Wallpapers/GreenImaginaryLandscape.jpg
 
 # Workspace layout
 workspace_layout tabbed
@@ -223,11 +225,22 @@ title_align left
 
 # Window Edges
 hide_edge_borders smart
-default_border pixel 3
+# default_border pixel 3
+for_window [class=".*"] border pixel 0
+# for_window [class="Brave
+
+# gaps
+# smart_gaps on
+# gaps inner 10 gaps outer 10
+workspace "1:Terminals" gaps inner 10
+
+# Colors <colorclass> <border> <background> <text> <indicator> <child_border>
+# client.focused          #ed7168 #285577 #ffffff #2e9ef4   #285577
+# client.unfocused        #757171 #222222 #888888 #292d2e   #222222
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-	position bottom
-}
+# bar {
+#         status_command i3status
+# 	position bottom
+# }
