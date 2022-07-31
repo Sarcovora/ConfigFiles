@@ -9,9 +9,10 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 neofetch
-xrandr --output Virtual1 --mode 2560x1440
+xrandr --output Virtual-1 --mode 2560x1440
+eval "$(starship init bash)"
 
-alias i3conf='vim ~/.config/i3/config'
+alias i3conf='nvim ~/.config/i3/config'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
