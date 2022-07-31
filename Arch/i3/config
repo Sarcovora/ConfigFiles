@@ -217,6 +217,7 @@ exec_always picom
 # exec_always feh --bg-scale /home/ekuo/Wallpapers/luka-senica-m1MBGEk_-iM-unsplash.jpg
 exec_always feh --bg-scale /home/ekuo/Wallpapers/GreenImaginaryLandscape.jpg
 # exec_always feh --bg-scale /home/ekuo/Wallpapers/FishingVillage.jpg
+# exec_always feh --bg-scale /home/ekuo/Wallpapers/Eclipse.jpg
 
 # Workspace layout
 # workspace_layout tabbed

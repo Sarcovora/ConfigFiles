@@ -8,7 +8,7 @@
 #clickable_url_ctrl = false
 #dynamic_title = true
 font = Monospace 16
-# font = Iosevka Fixed 16
+# font = Iosevka Fixed 8
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
