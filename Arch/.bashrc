@@ -13,7 +13,8 @@ xrandr --output Virtual-1 --mode 2560x1440
 eval "$(starship init bash)"
 
 alias i3conf='nvim ~/.config/i3/config'
-alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/starship.toml ~/Github/ConfigFiles/Arch/'
+alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/starship.toml ~/Github/ConfigFiles/Arch/ && cd ~/Github/ConfigFiles && git status'
+alias nv='nvim'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
