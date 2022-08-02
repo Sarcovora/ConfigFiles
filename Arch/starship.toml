@@ -26,7 +26,7 @@ symbol = " "
 
 [conda]
 truncation_length = 0
-ignore_base = false
+ignore_base = true
 symbol = " "
 
 [dart]
