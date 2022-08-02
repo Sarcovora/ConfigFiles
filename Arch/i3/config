@@ -228,7 +228,8 @@ exec_always picom
 # exec_always feh --bg-scale /home/ekuo/Wallpapers/GreenImaginaryLandscape.jpg
 # exec_always feh --bg-scale /home/ekuo/Wallpapers/FishingVillage.jpg
 # exec_always feh --bg-scale /home/ekuo/Wallpapers/Eclipse.jpg
-exec_always feh --bg-scale /home/ekuo/Wallpapers/NovigradDocks.jpg
+# exec_always feh --bg-scale /home/ekuo/Wallpapers/NovigradDocks.jpg
+exec_always feh --bg-scale /home/ekuo/SharedFolder/Wallpapers/gruvboxArt.jpg
 
 # Workspace layout
 # workspace_layout tabbed
@@ -240,7 +241,7 @@ title_align left
 hide_edge_borders smart
 # default_border pixel 3
 for_window [class=".*"] border pixel 0
-# for_window [class="Brave
+for_window [class="Termite"] border pixel 1
 
 # gaps
 # smart_gaps on
@@ -249,8 +250,8 @@ workspace "1:Terminals" gaps inner 10
 workspace "1:Terminals" gaps outer 10
 
 # Colors <colorclass> <border> <background> <text> <indicator> <child_border>
-client.focused        #2A9D8F    #2A9D8F   #FFFFFF   #2e9ef4      #285577
-client.unfocused      #264653    #264653   #2A9D8F   #292d2e      #222222
+client.focused        #2A9D8F    #2A9D8F   #FFFFFF   #2e9ef4      #d25239
+client.unfocused      #264653    #264653   #2A9D8F   #292d2e      #9e805d
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
