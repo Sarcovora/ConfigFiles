@@ -251,6 +251,15 @@ for_window [class="Termite"] border pixel 1
 workspace "1:Terminals" gaps inner 10
 workspace "1:Terminals" gaps outer 10
 
+workspace "5:Nemo" gaps inner 10
+workspace "5:Nemo" gaps outer 10
+
+workspace "9:Communications" gaps inner 10
+workspace "9:Communications" gaps outer 10
+
+workspace "10:Music" gaps inner 10
+workspace "10:Music" gaps outer 10
+
 # Colors <colorclass> <border> <background> <text> <indicator> <child_border>
 client.focused        #2A9D8F    #2A9D8F   #FFFFFF   #2e9ef4      #d25239
 client.unfocused      #264653    #264653   #2A9D8F   #292d2e      #9e805d
