@@ -163,7 +163,7 @@ for_window [class="discord"] move to workspace $ws9
 # application shortcuts
 # bindsym $mod+Shift+g exec google-chrome 2>/dev/null
 bindsym $mod+Shift+b exec brave 2>/dev/null
-bindsym $mod+Shift+s exec spotify 2>/dev/null
+bindsym $mod+Shift+s exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 bindsym $mod+Shift+d exec discord 2>/dev/null
 bindsym $mod+Shift+n exec nemo 2>/dev/null
 
