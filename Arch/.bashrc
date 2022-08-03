@@ -14,6 +14,7 @@ eval "$(starship init bash)"
 
 alias i3conf='nvim ~/.config/i3/config'
 alias polyconf='nvim ~/.config/polybar/config.ini'
+alias termconf='nvim ~/.config/termite/config'
 alias nv='nvim'
 alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/.config/starship.toml ~/Github/ConfigFiles/Arch/ && cd ~/Github/ConfigFiles && git status'
 
