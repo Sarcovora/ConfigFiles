@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 neofetch
-xrandr --output Virtual-1 --mode 2560x1440
+# xrandr --output Virtual-1 --mode 2560x1440
 eval "$(starship init bash)"
 
 alias i3conf='nvim ~/.config/i3/config'
@@ -17,6 +17,9 @@ alias polyconf='nvim ~/.config/polybar/config.ini'
 alias termconf='nvim ~/.config/termite/config'
 alias piconf='nvim ~/.config/picom/picom.conf'
 alias nv='nvim'
+
+alias disp25='xrandr --output Virtual-1 --mode 2560x1440'
+alias disp19='xrandr --output Virtual-1 --mode 1920x1080'
 alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/.config/ranger ~/.config/starship.toml ~/Github/ConfigFiles/Arch/ && cd ~/Github/ConfigFiles && git status'
 
 # >>> conda initialize >>>
