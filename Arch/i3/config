@@ -223,7 +223,7 @@ exec_always --no-startup-id bash ~/.config/polybar/launch.sh
 # bindsym $mod+f1 exec xrandr --output Virtual1 --mode 2560x1440
 
 exec_always picom
-# exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
+exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 
 # Startup the background
 # exec_always feh --bg-scale /home/ekuo/Wallpapers/luka-senica-m1MBGEk_-iM-unsplash.jpg
