@@ -17,13 +17,13 @@ alias polyconf='nvim ~/.config/polybar/config.ini'
 alias termconf='nvim ~/.config/termite/config'
 alias piconf='nvim ~/.config/picom/picom.conf'
 alias nv='nvim'
-alias addall='git add .'
+alias adda='git add .'
 alias pull='git pull'
 alias push='git push'
 
 alias disp25='xrandr --output Virtual-1 --mode 2560x1440'
 alias disp19='xrandr --output Virtual-1 --mode 1920x1080'
-alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/.config/neofetch ~/.config/ranger ~/.config/starship.toml ~/Github/ConfigFiles/Arch/ && cd ~/Github/ConfigFiles && git status'
+alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/.config/neofetch ~/.config/ranger ~/.config/nvim/init.vim ~/.config/starship.toml ~/Github/ConfigFiles/Arch/ && cd ~/Github/ConfigFiles && git status'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
