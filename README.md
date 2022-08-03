@@ -1,2 +1,2 @@
-# ConfigFiles
-All my configuration files on multiple OS
+# Configuration Files aka dotfiles
+Configuration Files for multiple OS.
