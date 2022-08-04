@@ -6,10 +6,12 @@ set hlsearch                " highlight search
 set incsearch               " incremental search
 set tabstop=4               " number of columns occupied by a tab 
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
+set smarttab
 set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
+set relativenumber
 set wildmode=longest,list   " get bash-like tab completions
 "set cc=80                  " set an 80 column border for good coding style
 "highlight ColorColumn ctermbg=235 guibg=#282828
@@ -23,3 +25,30 @@ set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
+
+
+" Plugins
+call plug#begin()
+
+Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
+Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'https://github.com/morhetz/gruvbox'
+Plug 'https://github.com/preservim/nerdtree'
+Plug 'https://github.com/preservim/nerdcommenter'
+Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
+
+call plug#end()
+
+:colorscheme gruvbox
+
+
+" keybinds
+" move line or visually selected block - alt+j/k
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+nnoremap <C-f> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
