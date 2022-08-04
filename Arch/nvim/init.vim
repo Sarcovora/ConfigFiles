@@ -11,7 +11,7 @@ set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
-set relativenumber
+" set relativenumber
 set wildmode=longest,list   " get bash-like tab completions
 "set cc=80                  " set an 80 column border for good coding style
 "highlight ColorColumn ctermbg=235 guibg=#282828
@@ -44,11 +44,19 @@ call plug#end()
 
 " keybinds
 " move line or visually selected block - alt+j/k
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+nnoremap <C-j> :m +1<CR>
+nnoremap <C-k> :m -2<CR>
 
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+
+
+
+
+
