@@ -25,7 +25,12 @@ alias push='git push'
 
 alias disp25='xrandr --output Virtual-1 --mode 2560x1440'
 alias disp19='xrandr --output Virtual-1 --mode 1920x1080'
-alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/.config/neofetch ~/.config/ranger ~/.config/nvim/ ~/.config/figletFonts/ ~/.config/starship.toml ~/Github/ConfigFiles/Arch/ && cd ~/Github/ConfigFiles && git status'
+# alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/.config/neofetch ~/.config/ranger ~/.config/nvim/ ~/.config/figletFonts/ ~/.config/starship.toml ~/Github/ConfigFiles/Arch/ && cd ~/Github/ConfigFiles && git status'
+updateconfs () {
+    cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/Github/ConfigFiles/Arch/
+    cp -r ~/.config/neofetch ~/.config/ranger ~/.config/nvim/ ~/.config/figletFonts/ ~/.config/starship.toml ~/Github/ConfigFiles/Arch/
+    cd ~/Github/ConfigFiles && git status
+}
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
