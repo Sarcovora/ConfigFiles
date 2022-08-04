@@ -8,7 +8,7 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-neofetch
+# neofetch
 # xrandr --output Virtual-1 --mode 2560x1440
 eval "$(starship init bash)"
 
