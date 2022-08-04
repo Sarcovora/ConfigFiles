@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # neofetch
-figlet -f ~/.config/figletFonts/3d.flf "Hi Evan!" | lolcat
+figlet -f ~/.config/figletFonts/3d.flf "Hi Evan!"
 # xrandr --output Virtual-1 --mode 2560x1440
 eval "$(starship init bash)"
 
@@ -18,8 +18,10 @@ alias polyconf='nvim ~/.config/polybar/config.ini'
 alias termconf='nvim ~/.config/termite/config'
 alias piconf='nvim ~/.config/picom/picom.conf'
 alias nvconf='nvim ~/.config/nvim/init.vim'
+alias baconf='nvim ~/.bashrc'
 alias nv='nvim'
-alias adda='git add .'
+alias ada='git add .'
+alias commit='git commit -m "updates"'
 alias pull='git pull'
 alias push='git push'
 
