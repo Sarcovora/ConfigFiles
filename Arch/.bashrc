@@ -24,7 +24,7 @@ alias push='git push'
 
 alias disp25='xrandr --output Virtual-1 --mode 2560x1440'
 alias disp19='xrandr --output Virtual-1 --mode 1920x1080'
-alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/.config/neofetch ~/.config/ranger ~/.config/nvim/ ~/.config/starship.toml ~/Github/ConfigFiles/Arch/ && cd ~/Github/ConfigFiles && git status'
+alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/.config/neofetch ~/.config/ranger ~/.config/nvim/ ~/.config/starship.toml ~/Github/ConfigFiles/Arch/ && cp -r ~/.local/share/nvim/plugged ~/Github/ConfigFiles/Arch/home_local_share_nvim_plgged/ && cd ~/Github/ConfigFiles && git status'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -41,3 +41,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
