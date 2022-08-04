@@ -9,6 +9,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # neofetch
+figlet -f ~/.config/figletFonts/3d.flf "Hi Evan!" | lolcat
 # xrandr --output Virtual-1 --mode 2560x1440
 eval "$(starship init bash)"
 
@@ -24,7 +25,7 @@ alias push='git push'
 
 alias disp25='xrandr --output Virtual-1 --mode 2560x1440'
 alias disp19='xrandr --output Virtual-1 --mode 1920x1080'
-alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/.config/neofetch ~/.config/ranger ~/.config/nvim/ ~/.config/starship.toml ~/Github/ConfigFiles/Arch/ && cd ~/Github/ConfigFiles && git status'
+alias updateconfs='cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/.config/neofetch ~/.config/ranger ~/.config/nvim/ ~/.config/figletFonts/ ~/.config/starship.toml ~/Github/ConfigFiles/Arch/ && cd ~/Github/ConfigFiles && git status'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
