@@ -40,6 +40,7 @@ Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
+Plug 'https://github.com/chentoast/marks.nvim' " marks marker
 
 call plug#end()
 
@@ -76,6 +77,26 @@ let g:airline_symbols.linenr = ''
 
 " inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<S-tab>"
 
-
+"
+" https://github.com/chentoast/marks.nvim 
+" MARKS PLUGIN KEY MAPPINGS
+"      mx              Set mark x
+"      m,              Set the next available alphabetical (lowercase) mark
+"      m;              Toggle the next available mark at the current line
+"      dmx             Delete mark x
+"      dm-             Delete all marks on the current line
+"      dm<space>       Delete all marks in the current buffer
+"      m]              Move to next mark
+"      m[              Move to previous mark
+"      m:              Preview mark. This will prompt you for a specific mark to
+"                      preview; press <cr> to preview the next mark.
+                     
+"      m[0-9]          Add a bookmark from bookmark group[0-9].
+"      dm[0-9]         Delete all bookmarks from bookmark group[0-9].
+"      m}              Move to the next bookmark having the same type as the bookmark under
+"                      the cursor. Works across buffers.
+"      m{              Move to the previous bookmark having the same type as the bookmark under
+"                      the cursor. Works across buffers.
+"      dm=             Delete the bookmark under the cursor.
 
 

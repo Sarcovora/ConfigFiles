@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # neofetch
-figlet -f ~/.config/figletFonts/3d.flf "Hi Evan!"
+# figlet -f ~/.config/figletFonts/3d.flf "Hi Evan!"
 # xrandr --output Virtual-1 --mode 2560x1440
 eval "$(starship init bash)"
 
@@ -24,6 +24,8 @@ alias ada='git add .'
 alias commit='git commit -m "updates"'
 alias pull='git pull'
 alias push='git push'
+
+alias cls='clear'
 
 alias disp25='xrandr --output Virtual-1 --mode 2560x1440'
 alias disp19='xrandr --output Virtual-1 --mode 1920x1080'

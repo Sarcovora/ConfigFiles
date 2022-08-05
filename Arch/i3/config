@@ -115,7 +115,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1:Terminals"
 set $ws2 "2:Browser"
-set $ws3 "3"
+set $ws3 "3:VSCode"
 set $ws4 "4"
 set $ws5 "5:Nemo"
 set $ws6 "6"
@@ -155,9 +155,11 @@ assign [class="Brave-browser"] $ws2
 assign [class="Anaconda-Navigator"] $ws3
 assign [class="discord"] $ws9
 assign [class="Nemo"] $ws5
+assign [class="Code"] $ws3
 
 for_window [class="Spotify"] move to workspace $ws10
 for_window [class="discord"] move to workspace $ws9
+# for_window [class="code"] move to workspace $ws10
 
 
 # application shortcuts
@@ -166,6 +168,7 @@ bindsym $mod+Shift+b exec brave 2>/dev/null
 bindsym $mod+Shift+s exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 bindsym $mod+Shift+d exec discord 2>/dev/null
 bindsym $mod+Shift+n exec nemo 2>/dev/null
+bindsym $mod+Shift+v exec code 2>/dev/null
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
