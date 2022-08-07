@@ -26,6 +26,7 @@ alias pull='git pull'
 alias push='git push'
 
 alias cls='clear'
+alias nf='neofetch'
 
 alias disp25='xrandr --output Virtual-1 --mode 2560x1440'
 alias disp19='xrandr --output Virtual-1 --mode 1920x1080'

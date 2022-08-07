@@ -12,6 +12,9 @@
 # style_7     style_8     style_9     style_10    style_11    style_12
 
 theme="style_7.rasi"
+# theme="style_8.rasi"
+# theme="style_9.rasi"
+
 # dir="$HOME/.config/rofi/launchers/colorful"
 dir="~/.config/rofi/launchers/colorful"
 

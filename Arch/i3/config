@@ -253,17 +253,17 @@ for_window [class="Discord"] border pixel 1
 # gaps
 # smart_gaps on
 # gaps inner 10 gaps outer 10
-workspace "1:Terminals" gaps inner 10
-workspace "1:Terminals" gaps outer 10
+workspace $ws1 gaps inner 10
+workspace $ws1 gaps outer 10
 
-workspace "5:Nemo" gaps inner 10
-workspace "5:Nemo" gaps outer 10
+workspace $ws5 gaps inner 10
+workspace $ws5 gaps outer 10
 
-workspace "9:Communications" gaps inner 10
-workspace "9:Communications" gaps outer 10
+workspace $ws9 gaps inner 10
+workspace $ws9 gaps outer 10
 
-workspace "10:Music" gaps inner 10
-workspace "10:Music" gaps outer 10
+workspace $ws10 gaps inner 10
+workspace $ws10 gaps outer 10
 
 # Colors <colorclass> <border> <background> <text> <indicator> <child_border>
 client.focused        #2A9D8F    #2A9D8F   #FFFFFF   #2e9ef4      #d25239
