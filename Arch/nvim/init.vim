@@ -41,10 +41,13 @@ Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/chentoast/marks.nvim' " marks marker
+Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 
 call plug#end()
 
-:colorscheme gruvbox
+" :colorscheme gruvbox
+:colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 
 " keybinds
 " move line or visually selected block - alt+j/k
