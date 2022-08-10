@@ -17,6 +17,7 @@ eval "$(starship init bash)"
 alias i3conf='nvim ~/.config/i3/config'
 alias polyconf='nvim ~/.config/polybar/config.ini'
 alias termconf='nvim ~/.config/termite/config'
+# alias kitconf='nvim ~/.conifg/kitty/kitty.conf'
 alias piconf='nvim ~/.config/picom/picom.conf'
 alias nvconf='nvim ~/.config/nvim/init.vim'
 alias baconf='nvim ~/.bashrc'
@@ -40,12 +41,12 @@ alias disp19='xrandr --output Virtual-1 --mode 1920x1080'
 
 updateconfs () {
     cp -r ~/.bashrc ~/.zshrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/Github/ConfigFiles/Arch/
-    cp -r ~/.local/share/applications/feh.desktop ~/Github/ConfigFiles/Arch/
+    cp -r ~/.local/share/applications/feh.desktop ~/.config/kitty ~/Github/ConfigFiles/Arch/
     cp -r ~/.config/neofetch ~/.config/ranger ~/.config/nvim/ ~/.config/figletFonts/ ~/.config/starship.toml ~/Github/ConfigFiles/Arch/
     cd ~/Github/ConfigFiles && git status
 }
 
-condainit () {
+coni () {
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
     __conda_setup="$('/home/ekuo/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"

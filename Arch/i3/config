@@ -9,8 +9,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Mod1 for Alt, Mod4 for Super
 set $mod Mod1
-set $term termite
+set $term kitty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -67,23 +68,11 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 # move focused window
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 # bindsym $mod+semicolon split h
@@ -153,6 +142,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 # force windows to open on certain workspace
 assign [class="URxvt"] $ws1
 assign [class="Termite"] $ws1
+assign [class="Kitty"] $ws1
 assign [class="Brave-browser"] $ws2
 assign [class="Anaconda-Navigator"] $ws3
 assign [class="discord"] $ws9
@@ -197,17 +187,6 @@ mode "resize" {
         bindsym Shift+k resize shrink height 30 px or 30 ppt
         bindsym Shift+l resize grow width 30 px or 30 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        bindsym Shift+Left resize shrink width 30 px or 30 ppt
-        bindsym Shift+Down resize grow height 30 px or 30 ppt
-        bindsym Shift+Up resize shrink height 30 px or 30 ppt
-        bindsym Shift+Right resize grow width 30 px or 30 ppt
-
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -219,7 +198,7 @@ bindsym $mod+r mode "resize"
 
 # Startup Applications
 # exec urxvt
-exec termite
+exec $term
 # exec google-chrome
 exec brave
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh
@@ -249,6 +228,7 @@ hide_edge_borders smart
 # default_border pixel 3
 for_window [class=".*"] border pixel 0
 for_window [class="Termite"] border pixel 1
+for_window [class="Kitty"] border pixel 1
 for_window [class="Spotify"] border pixel 1
 for_window [class="Discord"] border pixel 1
 
