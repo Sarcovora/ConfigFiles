@@ -40,9 +40,18 @@ alias disp25='xrandr --output Virtual-1 --mode 2560x1440'
 alias disp19='xrandr --output Virtual-1 --mode 1920x1080'
 
 updateconfs () {
-    cp -r ~/.bashrc ~/.zshrc ~/.config/i3 ~/.config/picom ~/.config/polybar ~/.config/termite ~/.config/rofi ~/Github/ConfigFiles/Arch/
+    cp -r ~/.bashrc ~/.zshrc ~/.config/i3 ~/.config/picom ~/Github/ConfigFiles/Arch/
+    
+    cp -r ~/.config/polybar ~/.config/termite ~/.config/rofi ~/Github/ConfigFiles/Arch/
+
+    cp -r ~/.config/betterlockscreenrc ~/Github/ConfigFiles/Arch/
+    
     cp -r ~/.local/share/applications/feh.desktop ~/.config/kitty ~/Github/ConfigFiles/Arch/
-    cp -r ~/.config/neofetch ~/.config/ranger ~/.config/nvim/ ~/.config/figletFonts/ ~/.config/starship.toml ~/Github/ConfigFiles/Arch/
+    
+    cp -r ~/.config/neofetch ~/.config/ranger ~/.config/nvim/ ~/Github/ConfigFiles/Arch/
+
+    cp -r ~/.config/figletFonts/ ~/.config/starship.toml ~/Github/ConfigFiles/Arch/
+    
     cd ~/Github/ConfigFiles && git status
 }
 
