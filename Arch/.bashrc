@@ -17,7 +17,7 @@ eval "$(starship init bash)"
 alias i3conf='nvim ~/.config/i3/config'
 alias polyconf='nvim ~/.config/polybar/config.ini'
 alias termconf='nvim ~/.config/termite/config'
-# alias kitconf='nvim ~/.conifg/kitty/kitty.conf'
+alias kitconf='nvim ~/.config/kitty/kitty.conf'
 alias piconf='nvim ~/.config/picom/picom.conf'
 alias nvconf='nvim ~/.config/nvim/init.vim'
 alias baconf='nvim ~/.bashrc'
