@@ -12,6 +12,9 @@
 # Mod1 for Alt, Mod4 for Super
 set $mod Mod1
 set $term kitty
+set $wallpath /home/ekuo/SharedFolder/Wallpapers/gruvboxArt.jpg
+# set $lockcmd i3lock -c 111111
+set $lockcmd betterlockscreen -l dim
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -30,7 +33,14 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# set desktop background with custom effect
+exec --no-startup-id betterlockscreen -w dim
+exec_always betterlockscreen -u $wallpath
+
+# Lock Screen
+bindsym $mod+p exec $lockcmd
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -47,20 +57,13 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+d exec rofi "-modi drun,run -show drun"
+# Start rofi
 bindsym $mod+d --release exec --no-startup-id ~/.config/rofi/launchers/colorful/launcher.sh
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -74,12 +77,7 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# split in horizontal orientation
-# bindsym $mod+semicolon split h
-
-# split in vertical orientation
-# bindsym $mod+v split v
-
+# Split Toggle
 bindsym $mod+t split toggle
 
 # enter fullscreen mode for the focused container
@@ -215,7 +213,7 @@ exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 # exec_always feh --bg-scale /home/ekuo/Wallpapers/FishingVillage.jpg
 # exec_always feh --bg-scale /home/ekuo/Wallpapers/Eclipse.jpg
 # exec_always feh --bg-scale /home/ekuo/Wallpapers/NovigradDocks.jpg
-exec_always feh --bg-scale /home/ekuo/SharedFolder/Wallpapers/gruvboxArt.jpg
+exec_always feh --bg-scale $wallpath
 
 # Workspace layout
 # workspace_layout tabbed
