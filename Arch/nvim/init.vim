@@ -25,6 +25,7 @@ set ttyfast                 " Speed up scrolling in Vim
 " set spell                 " enable spell check (may need to download language package)
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
+set termguicolors
 
 " Plugins
 call plug#begin()
@@ -42,6 +43,7 @@ Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'https://github.com/chentoast/marks.nvim' " marks marker
 Plug 'sonph/onehalf', { 'rtp': 'vim/' }
+Plug 'norcalli/nvim-colorizer.lua'
 
 call plug#end()
 
