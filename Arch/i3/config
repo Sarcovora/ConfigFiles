@@ -12,7 +12,9 @@
 # Mod1 for Alt, Mod4 for Super
 set $mod Mod1
 set $term kitty
-set $wallpath /home/ekuo/SharedFolder/Wallpapers/gruvboxArt.jpg
+# set $wallpath /home/ekuo/SharedFolder/Wallpapers/gruvboxArt.jpg
+# set $wallpath /home/ekuo/SharedFolder/Wallpapers/CyberPunk/alex-knight-Ys-DBJeX0nE-unsplash.jpg
+set $wallpath /home/ekuo/SharedFolder/Wallpapers/CyberPunk/sandro-katalina-k1bO_VTiZSs-unsplash.jpg
 set $lockpath /home/ekuo/SharedFolder/Wallpapers/Eclipse.jpg
 # set $lockcmd i3lock -c 111111
 set $lockcmd betterlockscreen -l dim
@@ -212,15 +214,7 @@ exec_always picom
 exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
 
 # Startup the background
-# exec_always feh --bg-scale /home/ekuo/Wallpapers/luka-senica-m1MBGEk_-iM-unsplash.jpg
-# exec_always feh --bg-scale /home/ekuo/Wallpapers/GreenImaginaryLandscape.jpg
-# exec_always feh --bg-scale /home/ekuo/Wallpapers/FishingVillage.jpg
-# exec_always feh --bg-scale /home/ekuo/Wallpapers/Eclipse.jpg
-# exec_always feh --bg-scale /home/ekuo/Wallpapers/NovigradDocks.jpg
 exec_always feh --bg-scale $wallpath
-
-# Workspace layout
-# workspace_layout tabbed
 
 # Titlebar allignment
 title_align left
