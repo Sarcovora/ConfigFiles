@@ -44,12 +44,19 @@ Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple c
 Plug 'https://github.com/chentoast/marks.nvim' " marks marker
 Plug 'sonph/onehalf', { 'rtp': 'vim/' }
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 call plug#end()
 
 " :colorscheme gruvbox
-:colorscheme onehalfdark
+" :colorscheme onehalfdark
+colorscheme tokyonight
 let g:airline_theme='onehalfdark'
+let g:tokyonight_transparent = "true"
+let g:tokyonight_transparent_sidebar = "true"
+
+" set line numbers to white:
+hi LineNr guifg=#ffffff
 
 " keybinds
 " move line or visually selected block - alt+j/k
