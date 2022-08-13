@@ -68,6 +68,9 @@ bindsym $mod+Shift+q kill
 # Start rofi
 bindsym $mod+d --release exec --no-startup-id ~/.config/rofi/launchers/colorful/launcher.sh
 
+# Enable floating
+for_window [class='kitty'] floating enable
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
