@@ -12,9 +12,9 @@
 # Mod1 for Alt, Mod4 for Super
 set $mod Mod1
 set $term kitty
-# set $wallpath /home/ekuo/SharedFolder/Wallpapers/gruvboxArt.jpg
+set $wallpath /home/ekuo/SharedFolder/Wallpapers/gruvboxArt.jpg
 # set $wallpath /home/ekuo/SharedFolder/Wallpapers/CyberPunk/alex-knight-Ys-DBJeX0nE-unsplash.jpg
-set $wallpath /home/ekuo/SharedFolder/Wallpapers/CyberPunk/sandro-katalina-k1bO_VTiZSs-unsplash.jpg
+# set $wallpath /home/ekuo/SharedFolder/Wallpapers/CyberPunk/sandro-katalina-k1bO_VTiZSs-unsplash.jpg
 set $lockpath /home/ekuo/SharedFolder/Wallpapers/Eclipse.jpg
 # set $lockcmd i3lock -c 111111
 set $lockcmd betterlockscreen -l dim
