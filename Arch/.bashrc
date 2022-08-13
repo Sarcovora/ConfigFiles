@@ -65,6 +65,13 @@ updateconfs () {
     cd ~/Github/ConfigFiles && git status
 }
 
+forceconfs () {
+    updateconfs
+    ada
+    commit
+    push
+}
+
 coni () {
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
