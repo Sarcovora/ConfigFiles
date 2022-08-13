@@ -70,6 +70,7 @@ forceconfs () {
     ada
     commit
     push
+    cd ~/
 }
 
 coni () {
