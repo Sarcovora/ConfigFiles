@@ -1,19 +1,15 @@
-#
 # ~/.bashrc
-#
+# vim:foldmethod=marker
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
+# alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# neofetch
-# figlet -f ~/.config/figletFonts/3d.flf "Hi Evan!"
-# xrandr --output Virtual-1 --mode 2560x1440
 eval "$(starship init bash)"
 
-# Config Shortcuts
+# Config File Shortcuts {{{
 alias i3conf='nvim ~/.config/i3/config'
 alias polyconf='nvim ~/.config/polybar/config.ini'
 alias termconf='nvim ~/.config/termite/config'
@@ -21,34 +17,36 @@ alias kitconf='nvim ~/.config/kitty/kitty.conf'
 alias piconf='nvim ~/.config/picom/picom.conf'
 alias nvconf='nvim ~/.config/nvim/init.vim'
 alias baconf='nvim ~/.bashrc'
+# }}}
 
-# Application Shortcuts
+# Application Shortcuts {{{
 alias nv='nvim'
 alias r='ranger'
 alias ada='git add .'
 alias commit='git commit -m "automated message"'
 alias pull='git pull'
 alias push='git push'
+# }}}
 
-# Command shortcuts
+# Command shortcuts {{{
 alias cls='clear'
 alias hcls='cd ~ && clear'
 alias nf='neofetch'
 alias ls='exa --color=always --group-directories-first'
-alias xls='exa -a --color=always --group-directories-first'
-alias xla='exa -la --color=always --group-directories-first'
-alias xlah='exa -lah --color=always --group-directories-first'
-alias lah='ls -lah'
-
+alias la='exa -a --color=always --group-directories-first'
+alias lah='exa -lah --color=always --group-directories-first'
 cdl () {
     cd $1
-    xlah
+    lah
 }
+# }}}
 
-# Display Stuff
+# Display Shortcuts {{{
 alias d25='xrandr --output Virtual-1 --mode 2560x1440'
 alias d19='xrandr --output Virtual-1 --mode 1920x1080'
+# }}}
 
+# Config File Git Updates {{{
 updateconfs () {
     cp -r ~/.bashrc ~/.zshrc ~/.config/i3 ~/.config/picom ~/Github/ConfigFiles/Arch/
     
@@ -72,7 +70,9 @@ forceconfs () {
     push
     cd ~/
 }
+# }}}
 
+# Anaconda Initialization {{{
 coni () {
     # >>> conda initialize >>>
     # !! Contents within this block are managed by 'conda init' !!
@@ -89,6 +89,7 @@ coni () {
     unset __conda_setup
     # <<< conda initialize <<<
 }
+# }}}
 
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
