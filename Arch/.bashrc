@@ -26,7 +26,7 @@ alias baconf='nvim ~/.bashrc'
 alias nv='nvim'
 alias r='ranger'
 alias ada='git add .'
-alias commit='git commit -m "updates"'
+alias commit='git commit -m "automated message"'
 alias pull='git pull'
 alias push='git push'
 
