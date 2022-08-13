@@ -7,9 +7,9 @@
 # Mod1 for Alt, Mod4 for Super
 set $mod Mod1
 set $term kitty
-set $wallpath /home/ekuo/SharedFolder/Wallpapers/gruvboxArt.jpg
+# set $wallpath /home/ekuo/SharedFolder/Wallpapers/gruvboxArt.jpg
 # set $wallpath /home/ekuo/SharedFolder/Wallpapers/CyberPunk/alex-knight-Ys-DBJeX0nE-unsplash.jpg
-# set $wallpath /home/ekuo/SharedFolder/Wallpapers/CyberPunk/sandro-katalina-k1bO_VTiZSs-unsplash.jpg
+set $wallpath /home/ekuo/SharedFolder/Wallpapers/CyberPunk/sandro-katalina-k1bO_VTiZSs-unsplash.jpg
 set $lockpath /home/ekuo/SharedFolder/Wallpapers/Eclipse.jpg
 # set $lockcmd i3lock -c 111111
 set $lockcmd betterlockscreen -l dim
@@ -40,7 +40,6 @@ client.unfocused      #264653    #264653   #2A9D8F   #292d2e      #9e805d
 #font pango:DejaVu Sans Mono 8
 
 # }}}
-
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
