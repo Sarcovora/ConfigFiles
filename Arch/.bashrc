@@ -34,11 +34,15 @@ alias push='git push'
 alias cls='clear'
 alias hcls='cd ~ && clear'
 alias nf='neofetch'
+alias ls='exa --color=always --group-directories-first'
+alias xls='exa -a --color=always --group-directories-first'
+alias xla='exa -la --color=always --group-directories-first'
+alias xlah='exa -lah --color=always --group-directories-first'
 alias lah='ls -lah'
 
 cdl () {
     cd $1
-    ls -lah
+    xlah
 }
 
 # Display Stuff
