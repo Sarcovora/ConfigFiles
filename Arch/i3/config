@@ -212,7 +212,7 @@ exec_always --no-startup-id bash ~/.config/polybar/launch.sh
 
 exec_always picom
 exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
-
+exec bash ~/.config/vmware_launch.sh
 # Startup the background
 exec_always feh --bg-scale $wallpath
 

@@ -36,15 +36,15 @@ alias hcls='cd ~ && clear'
 alias nf='neofetch'
 
 # Display Stuff
-alias disp25='xrandr --output Virtual-1 --mode 2560x1440'
-alias disp19='xrandr --output Virtual-1 --mode 1920x1080'
+alias d25='xrandr --output Virtual-1 --mode 2560x1440'
+alias d19='xrandr --output Virtual-1 --mode 1920x1080'
 
 updateconfs () {
     cp -r ~/.bashrc ~/.zshrc ~/.config/i3 ~/.config/picom ~/Github/ConfigFiles/Arch/
     
     cp -r ~/.config/polybar ~/.config/termite ~/.config/rofi ~/Github/ConfigFiles/Arch/
 
-    cp -r ~/.config/betterlockscreenrc ~/Github/ConfigFiles/Arch/
+    cp -r ~/.config/betterlockscreenrc ~/.config/vmware_launch.sh ~/Github/ConfigFiles/Arch/
     
     cp -r ~/.local/share/applications/feh.desktop ~/.config/kitty ~/Github/ConfigFiles/Arch/
     
