@@ -7,6 +7,8 @@
 # Mod1 for Alt, Mod4 for Super
 set $mod Mod1
 set $term kitty
+set $browser brave
+set $compositor picom
 set $wallpath ~/SharedFolder/Wallpapers/Abstract/7196309.jpg
 set $lockpath ~/SharedFolder/Wallpapers/Eclipse.jpg
 set $lockcmd betterlockscreen -l dim
@@ -31,6 +33,17 @@ exec --no-startup-id dex --autostart --environment i3
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+
+exec $term
+exec $browser
+exec_always --no-startup-id bash ~/.config/polybar/launch.sh
+
+exec_always $compositor
+exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
+# used to startup vmware-user for shared clipboard
+exec bash ~/.config/vmware_launch.sh
+
+exec_always feh --bg-scale $wallpath
 # }}}
 
 # Windows {{{
@@ -215,14 +228,10 @@ bindsym $mod+Shift+v exec code 2>/dev/null
 # }}}
 
 # Window Resizing {{{
-# resize window (you can also use the mouse for that)
+# resize window (you can also use the mouse for that): use mod + right click
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
@@ -240,16 +249,4 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-# }}}
-
-# Startup {{{
-exec $term
-exec brave
-exec_always --no-startup-id bash ~/.config/polybar/launch.sh
-
-exec_always picom
-exec LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
-exec bash ~/.config/vmware_launch.sh
-
-exec_always feh --bg-scale $wallpath
 # }}}
