@@ -15,7 +15,8 @@
 # full_circle     full_square     full_rounded     full_alt
 # row_circle      row_square      row_rounded      row_alt
 
-theme="full_circle"
+# theme="full_circle"
+theme="row_circle"
 dir="$HOME/.config/rofi/powermenu"
 
 # random colors
@@ -34,11 +35,16 @@ uptime=$(uptime -p | sed -e 's/up //g')
 rofi_command="rofi -theme $dir/$theme"
 
 # Options
-shutdown=""
-reboot=""
-lock=""
-suspend=""
-logout=""
+# shutdown=""
+# reboot=""
+# lock=""
+# suspend=""
+# logout=""
+shutdown=""
+reboot="Reboot"
+lock="Lock"
+suspend="Suspend"
+logout="Logout"
 
 # Confirmation
 confirm_exit() {

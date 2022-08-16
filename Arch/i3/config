@@ -54,6 +54,9 @@ bindsym $mod+Shift+q kill
 # Start rofi
 bindsym $mod+d --release exec --no-startup-id ~/.config/rofi/launchers/colorful/launcher.sh
 
+# Rofi Powermenu
+bindsym $mod+Shift+p exec bash ~/.config/rofi/powermenu/powermenu.sh
+
 # Enable floating
 for_window [class='kitty'] floating enable
 
@@ -89,8 +92,8 @@ for_window [class="Discord"] border pixel 1
 
 
 # Colors <colorclass> <border> <background> <text> <indicator> <child_border>
-        client.focused        #2A9D8F    #2A9D8F   #FFFFFF   #2e9ef4      #d25239
-        client.unfocused      #264653    #264653   #2A9D8F   #292d2e      #9e805d
+client.focused        #2A9D8F    #2A9D8F   #FFFFFF   #2e9ef4      #d25239
+client.unfocused      #264653    #264653   #2A9D8F   #292d2e      #9e805d
 # }}}
 
 # Lock Screen {{{
