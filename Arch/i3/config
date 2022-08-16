@@ -9,7 +9,8 @@ set $mod Mod1
 set $term kitty
 # set $wallpath /home/ekuo/SharedFolder/Wallpapers/gruvboxArt.jpg
 # set $wallpath /home/ekuo/SharedFolder/Wallpapers/CyberPunk/alex-knight-Ys-DBJeX0nE-unsplash.jpg
-set $wallpath /home/ekuo/SharedFolder/Wallpapers/CyberPunk/sandro-katalina-k1bO_VTiZSs-unsplash.jpg
+# set $wallpath /home/ekuo/SharedFolder/Wallpapers/CyberPunk/sandro-katalina-k1bO_VTiZSs-unsplash.jpg
+set $wallpath /home/ekuo/SharedFolder/Wallpapers/Abstract/7196309.jpg
 set $lockpath /home/ekuo/SharedFolder/Wallpapers/Eclipse.jpg
 # set $lockcmd i3lock -c 111111
 set $lockcmd betterlockscreen -l dim
@@ -124,16 +125,16 @@ bindsym $mod+s focus child
 # Workspaces {{{
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "001"
+set $ws2 "002"
+set $ws3 "003"
+set $ws4 "004"
+set $ws5 "005"
+set $ws6 "006"
+set $ws7 "007"
+set $ws8 "008"
+set $ws9 "009"
+set $ws10 "010"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
