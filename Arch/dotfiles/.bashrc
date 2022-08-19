@@ -49,7 +49,7 @@ alias d19='xrandr --output Virtual-1 --mode 1920x1080'
 
 # Config File Git Updates {{{
 updateconfs () {
-    cp -r ~/.bashrc ~/.zshrc ~/.config/i3 ~/.config/picom ~/Github/ConfigFiles/Arch/dotfiles/
+    cp -r ~/.bashrc ~/.config/i3 ~/.config/picom ~/Github/ConfigFiles/Arch/dotfiles/
     
     cp -r ~/.config/polybar ~/.config/termite ~/.config/rofi ~/Github/ConfigFiles/Arch/dotfiles/
 
