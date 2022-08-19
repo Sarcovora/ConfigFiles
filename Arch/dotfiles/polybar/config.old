@@ -32,7 +32,6 @@ foreground = #DEDAE8
 
 ; Primary: Default Yellow
 ; primary = #F0C674
-
 ; Primary: Shade of Green
 ; primary = #48E070
 
@@ -54,7 +53,7 @@ alert_underline = #A54242
 ; Disabled = Grey
 disabled = #707880
 
-[bar/mybar]
+[bar/mainbar]
 width = 100%
 height = 24pt
 # radius = 6
@@ -97,14 +96,12 @@ enable-ipc = true
 
 ; tray-position = right
 
-; wm-restack = generic
-; wm-restack = bspwm
 wm-restack = i3
 
 ; override-redirect = true
 
 [module/xworkspaces]
-type = internal/xworkspaces
+type = internal/i3
 
 pin-workspaces = true
 enable-click = true
