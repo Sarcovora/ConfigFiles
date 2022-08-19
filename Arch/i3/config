@@ -52,10 +52,12 @@ exec_always feh --bg-scale $wallpath
 bindsym $mod+Shift+q kill
 
 # Start rofi
-bindsym $mod+d --release exec --no-startup-id ~/.config/rofi/launchers/colorful/launcher.sh
+# bindsym $mod+d --release exec --no-startup-id ~/.config/rofi/launchers/colorful/launcher.sh
+bindsym $mod+d --release exec --no-startup-id ~/.config/rofi/scripts/launcher_t7
 
 # Rofi Powermenu
-bindsym $mod+Shift+p exec bash ~/.config/rofi/powermenu/powermenu.sh
+# bindsym $mod+Shift+p exec bash ~/.config/rofi/powermenu/powermenu.sh
+bindsym $mod+Shift+p exec bash ~/.config/rofi/scripts/powermenu_t5
 
 # Enable floating
 for_window [class='kitty'] floating enable
@@ -205,7 +207,7 @@ workspace $ws10 gaps outer 10
 # force windows to open on certain workspace
 assign [class="URxvt"] $ws1
 assign [class="Termite"] $ws1
-assign [class="Kitty"] $ws1
+assign [class="kitty"] $ws1
 assign [class="Brave-browser"] $ws2
 assign [class="Anaconda-Navigator"] $ws3
 assign [class="discord"] $ws9
