@@ -14,7 +14,6 @@ BBlue='\033[1;34m'  BPurple='\033[1;35m' BCyan='\033[1;36m'  BWhite='\033[1;37m'
 DIR=`pwd`
 # FONT_DIR="$HOME/.local/share/fonts"
 FONT_DIR="/usr/share/fonts"
-CONF_DIR="$HOME/.config/"
 
 # Install Fonts
 install_fonts() {
