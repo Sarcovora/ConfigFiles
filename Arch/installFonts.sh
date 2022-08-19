@@ -3,7 +3,7 @@
 ## Author : Evan Kuo (Sarcovora)
 ## Github : @Sarcovora
 
-## Installer Script
+## Font Installer Script
 
 ## Colors ----------------------------
 Color_Off='\033[0m'
@@ -13,7 +13,7 @@ BBlue='\033[1;34m'  BPurple='\033[1;35m' BCyan='\033[1;36m'  BWhite='\033[1;37m'
 ## Directories ----------------------------
 DIR=`pwd`
 # FONT_DIR="$HOME/.local/share/fonts"
-FONT_DIR="/usr/share/fonts"
+FONT_DIR="/usr/share/fonts/sarcInstall"
 
 # Install Fonts
 install_fonts() {
