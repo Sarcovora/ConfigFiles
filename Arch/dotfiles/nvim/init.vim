@@ -1,6 +1,7 @@
 set nocompatible            " disable compatibility to old-time vi
 set exrc
 set showmatch               " show matching 
+set smartcase
 set ignorecase              " case insensitive 
 set mouse=v                 " middle-click paste with 
 " set hlsearch                " highlight search 
@@ -18,6 +19,8 @@ set wildmode=longest,list   " get bash-like tab completions
 "set cc=80                  " set an 80 column border for good coding style
 "highlight ColorColumn ctermbg=235 guibg=#282828
 set nowrap
+set noswapfile
+set nobackup
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
@@ -29,6 +32,9 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 set termguicolors
+set scrolloff=8
+
+set signcolumn=yes
 
 " Plugins
 call plug#begin()
