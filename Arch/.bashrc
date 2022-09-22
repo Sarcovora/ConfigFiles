@@ -1,5 +1,4 @@
 # ~/.bashrc
-# vim:foldmethod=marker
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
