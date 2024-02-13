@@ -1,0 +1,266 @@
+{
+  // Open json editor for settings
+  "workbench.settings.editor": "json",
+
+  // Theme
+  "workbench.colorTheme": "Kanagawa Wave",
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "catppuccin-icons.hidesExplorerArrows": true,
+
+
+  // Font
+  "editor.fontSize": 14,
+  "terminal.integrated.fontFamily": "GeistMono Nerd Font",
+  "editor.fontLigatures": false,
+  "editor.fontFamily": "GeistMono Nerd Font",
+  "scm.inputFontFamily": "GeistMono Nerd Font",
+  "chat.editor.fontFamily": "GeistMono Nerd Font",
+  "debug.console.fontFamily": "GeistMono Nerd Font",
+  "editor.codeLensFontFamily": "GeistMono Nerd Font",
+  "notebook.output.fontFamily": "GeistMono Nerd Font",
+
+  // Suggestions
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+  // Cursor
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "line",
+
+  // Vim
+  "vim.handleKeys": {
+    "<C-x>": false,
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.useSystemClipboard": true,
+  "vim.smartRelativeLine": true,
+  "vim.enableNeovim": true,
+  "vim.hlsearch": false,
+  "vim.incsearch": true,
+  "vim.ignorecase": true,
+  "vim.smartcase": true,
+  "vim.mouseSelectionGoesIntoVisualMode": false,
+  // "vim.lineNumbersRelative": true,
+  "vim.scrollOff": 8,
+  "vim.leader": "<space>",
+  "vim.easymotion": true,
+
+  // UI
+  "editor.lineNumbers": "relative",
+  "notebook.lineNumbers": "on",
+  "editor.wordWrap": "off",
+  "editor.tabSize": 4,
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": false
+  },
+  "[markdown-math]": {
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": false
+  },
+  "[markdown_latex_combined]": {
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": false
+  },
+
+  "explorer.compactFolders": false,
+  "editor.linkedEditing": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.scrollbar.horizontal": "auto",
+  "editor.stickyScroll.enabled": true,
+
+  // APC
+  // "apc.activityBar": {
+  //   "position": "bottom",
+  //   // "hideSettings": true,
+  //   "size": 30
+  // },
+  "apc.font.family": "GeistMono Nerd Font",
+  // "apc.statusBar": {
+  //   "position": "editor-bottom",
+  //   "height": 30
+  //   // "fontSize": 10,
+  // },
+  // "window.titleBarStyle": "native",
+  // "window.titleBarStyle": "custom",
+  // "apc.electron": {
+    // "frame": false,
+    // "titleBarStyle": "hidden",
+    // "titleBarStyle": "customButtonsOnHover",
+    // "trafficLightPosition": {
+      // "x": 10,
+      // "y": 7
+    // }
+  // },
+  // "apc.header": {
+  //   // "height": 35,
+  //   "height": 28,
+  //   "fontSize": 11
+  // },
+  // "apc.sidebar.titlebar": {
+  //   "height": 35,
+  //   "fontSize": 11
+  // },
+
+  // Custom CSS
+  // "apc.stylesheet": {
+  //   // ".sidebar > .composite": "height: 10px !important",
+  //   ".title-actions > .sidebar": "height: 10px !important",
+  //   ".title-label": "display: none !important"
+  //   // ".title-actions": "display: none !important",
+  // },
+
+  "editor.mouseWheelZoom": true,
+  "java.semanticHighlighting.enabled": true,
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+  "editor.insertSpaces": false,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
+  "security.workspace.trust.untrustedFiles": "open",
+
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true,
+    "yaml": true,
+    "python": true,
+    "typescriptreact": false
+  },
+  "git.confirmSync": false,
+  "workbench.startupEditor": "none",
+  "files.autoSave": "onFocusChange",
+  "workbench.tree.renderIndentGuides": "always",
+  "editor.minimap.enabled": false,
+  "background.windowBackgrounds": [],
+  "background.backgroundOpacity": [0.9, 0.9, 0.9, 0.9],
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "java.jdt.ls.java.home": "",
+  "java.configuration.runtimes": [
+    {
+        "name": "JavaSE-11",
+        "path": "/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home",
+        "default": true
+    }
+],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": ["%DOCFILE%"],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdfLaTeX",
+      "tools": ["pdflatex"]
+    },
+    {
+      "name": "latexmk 🔃",
+      "tools": ["latexmk"]
+    },
+    {
+      "name": "xelatex",
+      "tools": ["xelatex"]
+    },
+    {
+      "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
+      "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+    },
+    {
+      "name": "xelatex ➞ bibtex ➞ xelatex`×2",
+      "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
+    }
+  ],
+  "background.backgroundBlur": [
+    "1",
+    "0",
+    "0",
+    "0"
+  ],
+  "git.autofetch": true,
+  "markdown-preview-enhanced.printBackground": true,
+  "markdown-preview-enhanced.previewTheme": "vue.css",
+  "workbench.editorAssociations": {
+    "*.html": "default"
+  },
+  "markdown-preview-enhanced.codeBlockTheme": "vue.css",
+  "cSpell.userWords": ["gameplay"],
+  "terminal.integrated.env.osx": {},
+  "editor.accessibilitySupport": "off",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "console-ninja.featureSet": "Community",
+  "workbench.editor.tabActionCloseVisibility": false,
+  "zenMode.hideStatusBar": false,
+  "breadcrumbs.icons": false,
+  "gitlens.blame.highlight.locations": ["gutter", "overview"],
+  "gitlens.hovers.currentLine.enabled": false,
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.clang_format_style": "Chromium",
+  "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: true, ColumnLimit: 150, AccessModifierOffset: -4, NamespaceIndentation: All }",
+  "update.mode": "manual",
+  "workbench.activityBar.location": "top",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "security.promptForLocalFileProtocolHandling": false,
+  "animations.Install-Method": "Apc Customize UI++"
+}
