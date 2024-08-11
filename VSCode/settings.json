@@ -3,10 +3,9 @@
   "workbench.settings.editor": "json",
 
   // Theme
-  "workbench.colorTheme": "Kanagawa Wave",
-  "workbench.iconTheme": "catppuccin-macchiato",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
   "catppuccin-icons.hidesExplorerArrows": true,
-
 
   // Font
   "editor.fontSize": 14,
@@ -34,14 +33,12 @@
     "<C-f>": false
   },
   "vim.useSystemClipboard": true,
-  "vim.smartRelativeLine": true,
   "vim.enableNeovim": true,
   "vim.hlsearch": false,
   "vim.incsearch": true,
   "vim.ignorecase": true,
   "vim.smartcase": true,
   "vim.mouseSelectionGoesIntoVisualMode": false,
-  // "vim.lineNumbersRelative": true,
   "vim.scrollOff": 8,
   "vim.leader": "<space>",
   "vim.easymotion": true,
@@ -72,6 +69,29 @@
   "editor.scrollbar.horizontal": "auto",
   "editor.stickyScroll.enabled": true,
 
+  // TODO Tree
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "gutterIcon": true
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check",
+      "iconColour": "lime"
+    },
+    "FIXME": {
+      "iconColour": "orange"
+    },
+    "BUG": {
+      "iconColour": "red"
+    },
+    "QUESTION": {
+      "icon": "light-bulb",
+      "iconColour": "yellow"
+    }
+  },
+  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "QUESTION"],
+
   // APC
   // "apc.activityBar": {
   //   "position": "bottom",
@@ -87,13 +107,13 @@
   // "window.titleBarStyle": "native",
   // "window.titleBarStyle": "custom",
   // "apc.electron": {
-    // "frame": false,
-    // "titleBarStyle": "hidden",
-    // "titleBarStyle": "customButtonsOnHover",
-    // "trafficLightPosition": {
-      // "x": 10,
-      // "y": 7
-    // }
+  // "frame": false,
+  // "titleBarStyle": "hidden",
+  // "titleBarStyle": "customButtonsOnHover",
+  // "trafficLightPosition": {
+  // "x": 10,
+  // "y": 7
+  // }
   // },
   // "apc.header": {
   //   // "height": 35,
@@ -130,7 +150,7 @@
     "scminput": true,
     "yaml": true,
     "python": true,
-    "typescriptreact": false
+    "typescriptreact": true
   },
   "git.confirmSync": false,
   "workbench.startupEditor": "none",
@@ -145,11 +165,11 @@
   "java.jdt.ls.java.home": "",
   "java.configuration.runtimes": [
     {
-        "name": "JavaSE-11",
-        "path": "/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home",
-        "default": true
+      "name": "JavaSE-11",
+      "path": "/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home",
+      "default": true
     }
-],
+  ],
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
@@ -215,12 +235,7 @@
       "tools": ["xelatex", "bibtex", "xelatex", "xelatex"]
     }
   ],
-  "background.backgroundBlur": [
-    "1",
-    "0",
-    "0",
-    "0"
-  ],
+  "background.backgroundBlur": ["1", "0", "0", "0"],
   "git.autofetch": true,
   "markdown-preview-enhanced.printBackground": true,
   "markdown-preview-enhanced.previewTheme": "vue.css",
@@ -229,7 +244,9 @@
   },
   "markdown-preview-enhanced.codeBlockTheme": "vue.css",
   "cSpell.userWords": ["gameplay"],
-  "terminal.integrated.env.osx": {},
+  "terminal.integrated.env.osx": {
+    "CW_NEW_SESSION": "1"
+  },
   "editor.accessibilitySupport": "off",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -255,12 +272,20 @@
   "C_Cpp.clang_format_style": "Chromium",
   "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: true, ColumnLimit: 150, AccessModifierOffset: -4, NamespaceIndentation: All }",
   "update.mode": "manual",
-  "workbench.activityBar.location": "top",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
   "security.promptForLocalFileProtocolHandling": false,
-  "animations.Install-Method": "Apc Customize UI++"
+  "animations.Install-Method": "Apc Customize UI++",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.activityBar.location": "top",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vim.smartRelativeLine": true,
+  "github.copilot.editor.enableAutoCompletions": true
 }
