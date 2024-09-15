@@ -1,17 +1,21 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+
+# NOTE: Commented out
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh # NOTE: commented out
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
-HYPHEN_INSENSITIVE="true"
+ZSH_THEME="powerlevel10k/powerlevel10k" # NOTE: commented out
 
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+HYPHEN_INSENSITIVE="true" # NOTE: commented out
+
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time # NOTE: commented out
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -41,10 +45,15 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-plugins=(git)
+plugins=(git) # NOTE: commented out
 
-source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh # NOTE: commented out
 
+# zen.zsh
+# fpath+="$HOME/.zsh/zen"
+# autoload -Uz promptinit
+# promptinit
+# prompt zen
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -52,7 +61,7 @@ source $ZSH/oh-my-zsh.sh
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh NOTE: uncomment this line
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -73,6 +82,9 @@ unset __conda_setup
 HISTFILE='/Users/ekuo/.zsh_history'
 HISTSIZE=9999999
 SAVEHIST=$HISTSIZE
+
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 # ls aliases
 alias l='eza -lah'
@@ -105,6 +117,10 @@ alias xtrix='ssh -X evankuo@trix.cs.utexas.edu'
 
 alias frost='ssh evankuo@frosted-flakes.cs.utexas.edu'
 alias kix='ssh evankuo@kix.cs.utexas.edu'
+
+alias onyx='ssh evankuo@onyx.cs.utexas.edu'
+alias chess='ssh evankuo@chess.cs.utexas.edu'
+alias citrine='ssh evankuo@citrine.cs.utexas.edu'
 
 # ssh arch machines
 alias alpaca='ssh ek9675@3.16.7.149'
