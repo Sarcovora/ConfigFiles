@@ -41,9 +41,6 @@ end) -- apple mail
 hs.hotkey.bind(hyper, "F", function()
 	switchToAndFromApp("com.apple.finder")
 end) -- finder
-hs.hotkey.bind(hyper, "K", function()
-	switchToAndFromApp("com.cron.electron")
-end) -- notion calendar
 hs.hotkey.bind(hyper, "L", function()
 	switchToAndFromApp("com.tinyspeck.slackmacgap")
 end) -- slack
@@ -56,12 +53,15 @@ end) -- notino
 hs.hotkey.bind(hyper, "O", function()
 	switchToAndFromApp("md.obsidian")
 end) -- obsidian
+hs.hotkey.bind(hyper, "P", function()
+	switchToAndFromApp("com.apple.iBooksX")
+end) -- books
+hs.hotkey.bind(hyper, "Q", function()
+	switchToAndFromApp("com.apple.Notes")
+end) -- notes
 hs.hotkey.bind(hyper, "R", function()
 	switchToAndFromApp("com.apple.reminders")
 end) -- reminders
-hs.hotkey.bind(hyper, "T", function()
-	switchToAndFromApp("com.googlecode.iterm2")
-end) -- iterm2
 hs.hotkey.bind(hyper, "U", function()
 	switchToAndFromApp("com.apple.Music")
 end) -- apple music
@@ -71,8 +71,17 @@ end) -- vscode
 hs.hotkey.bind(hyper, "W", function()
 	switchToAndFromApp("dev.warp.Warp-Stable")
 end) -- warp
+hs.hotkey.bind(hyper, "X", function()
+	switchToAndFromApp("com.apple.findmy")
+end) -- chat gpt
+hs.hotkey.bind(hyper, "Y", function()
+	switchToAndFromApp("com.openai.chat")
+end) -- chat gpt
+hs.hotkey.bind(hyper, "Z", function()
+	switchToAndFromApp("com.github.wez.wezterm")
+end) -- wezterm
 
--- NOTE: Still have G, H, I, J, P, Q, S, X, Y, Z available
+-- NOTE: Still have G, H, I, J, K, S, T, available
 
 -- show the bundleid of the currently open window
 hs.hotkey.bind(hyper, "`", function()
