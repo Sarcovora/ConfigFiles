@@ -116,11 +116,21 @@ alias trix='ssh evankuo@trix.cs.utexas.edu'
 alias xtrix='ssh -X evankuo@trix.cs.utexas.edu'
 
 alias frost='ssh evankuo@frosted-flakes.cs.utexas.edu'
+alias xfrost='ssh -X evankuo@frosted-flakes.cs.utexas.edu'
+
 alias kix='ssh evankuo@kix.cs.utexas.edu'
+alias xkix='ssh -X evankuo@kix.cs.utexas.edu'
 
 alias onyx='ssh evankuo@onyx.cs.utexas.edu'
+alias xonyx='ssh -X evankuo@onyx.cs.utexas.edu'
+
 alias chess='ssh evankuo@chess.cs.utexas.edu'
+alias xchess='ssh -X evankuo@chess.cs.utexas.edu'
+
 alias citrine='ssh evankuo@citrine.cs.utexas.edu'
+alias xcitrine='ssh -X evankuo@citrine.cs.utexas.edu'
+alias cit='ssh evankuo@citrine.cs.utexas.edu'
+alias xcit='ssh -X evankuo@citrine.cs.utexas.edu'
 
 # ssh arch machines
 alias alpaca='ssh ek9675@3.16.7.149'
@@ -146,3 +156,6 @@ eval "$(zoxide init zsh)"
 eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# PATH
+PATH=~/.console-ninja/.bin:$PATH
