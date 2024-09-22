@@ -80,6 +80,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+conda config --set auto_activate_base false
+
 # history
 HISTFILE='/Users/ekuo/.zsh_history_zen'
 HISTSIZE=999999
@@ -161,7 +163,6 @@ yy () {
 # Shell Integrations
 eval "$(zoxide init zsh)"
 eval $(thefuck --alias)
-eval "$(fzf --zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
