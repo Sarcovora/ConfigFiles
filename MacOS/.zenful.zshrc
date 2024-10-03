@@ -110,6 +110,7 @@ alias zi='__zoxide_zi'
 
 alias vim='nvim'
 alias vi='nvim'
+alias v='nvim'
 
 alias bat='bat -A'
 
@@ -147,6 +148,7 @@ alias dodo='ssh ek9675@52.14.97.212'
 
 # ssh csres
 alias hockey='ssh -X air_hockey@pearl-cluster.csres.utexas.edu'
+alias bisim='ssh bisim@pearl-cluster.csres.utexas.edu'
 alias poincare='ssh ekuo@poincare.csres.utexas.edu'
 
 # functions
@@ -158,6 +160,16 @@ yy () {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+}
+
+tt () {
+    local session
+    session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | head -n1)
+    if [ -n "$session" ]; then
+        tmux attach-session -t "$session"
+    else
+        echo "No tmux sessions found :("
+    fi
 }
 
 # Shell Integrations
