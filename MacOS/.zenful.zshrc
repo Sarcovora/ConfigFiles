@@ -1,3 +1,6 @@
+# CodeWhisperer pre block. Keep at the top of this file.
+# [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -178,5 +181,13 @@ eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# VARS
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/nitishgupta/.mujoco/mujoco210/bin
+# export MUJOCO_PY_MJPRO_PATH=~/.mujoco/mujoco200
+# export MUJOCO_PY_MJKEY_PATH=~/.mujoco/mjkey.txt
+
 # PATH
 PATH=~/.console-ninja/.bin:$PATH
+
+# CodeWhisperer post block. Keep at the bottom of this file.
+# [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
