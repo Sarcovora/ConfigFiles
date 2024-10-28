@@ -41,6 +41,9 @@ end) -- apple mail
 hs.hotkey.bind(hyper, "F", function()
 	switchToAndFromApp("com.apple.finder")
 end) -- finder
+hs.hotkey.bind(hyper, "K", function()
+	switchToAndFromApp("net.ankiweb.dtop")
+end) -- anki
 hs.hotkey.bind(hyper, "L", function()
 	switchToAndFromApp("com.tinyspeck.slackmacgap")
 end) -- slack
@@ -62,15 +65,21 @@ end) -- notes
 hs.hotkey.bind(hyper, "R", function()
 	switchToAndFromApp("com.apple.reminders")
 end) -- reminders
+hs.hotkey.bind(hyper, "T", function()
+	switchToAndFromApp("com.googlecode.iterm2")
+end) -- iterm2
 hs.hotkey.bind(hyper, "U", function()
 	switchToAndFromApp("com.apple.Music")
 end) -- apple music
 hs.hotkey.bind(hyper, "V", function()
 	switchToAndFromApp("com.microsoft.VSCode")
 end) -- vscode
+-- hs.hotkey.bind(hyper, "W", function()
+-- 	switchToAndFromApp("dev.warp.Warp-Stable")
+-- end) -- warp
 hs.hotkey.bind(hyper, "W", function()
-	switchToAndFromApp("dev.warp.Warp-Stable")
-end) -- warp
+	switchToAndFromApp("com.github.wez.wezterm")
+end) -- wezterm
 hs.hotkey.bind(hyper, "X", function()
 	switchToAndFromApp("com.apple.findmy")
 end) -- chat gpt
@@ -78,14 +87,81 @@ hs.hotkey.bind(hyper, "Y", function()
 	switchToAndFromApp("com.openai.chat")
 end) -- chat gpt
 hs.hotkey.bind(hyper, "Z", function()
-	switchToAndFromApp("com.github.wez.wezterm")
-end) -- wezterm
+	switchToAndFromApp("org.zotero.zotero")
+end) -- zotero
 
--- NOTE: Still have G, H, I, J, K, S, T, available
+-- NOTE: Still have G, H, I, J, S, available
 
--- show the bundleid of the currently open window
-hs.hotkey.bind(hyper, "`", function()
-	local bundleID = hs.window.focusedWindow():application():bundleID()
-	hs.alert.show(bundleID)
-	hs.pasteboard.setContents(bundleID)
+-- Move window function
+function moveWindow(xDelta, yDelta)
+	local win = hs.window.focusedWindow()
+	if not win then
+		return
+	end
+
+	local f = win:frame()
+	f.x = f.x + xDelta
+	f.y = f.y + yDelta
+	win:setFrame(f)
+end
+
+-- Create timers to allow continuous movement
+local moveTimers = {
+	left = nil,
+	right = nil,
+	up = nil,
+	down = nil,
+}
+
+-- Function to start moving window in a direction continuously
+function startMoving(direction)
+	if moveTimers[direction] then
+		return
+	end -- Prevent multiple timers for the same direction
+
+	local xDelta, yDelta = 0, 0
+	local moveAmt = 15
+	if direction == "left" then
+		xDelta = -1 * moveAmt
+	elseif direction == "right" then
+		xDelta = moveAmt
+	elseif direction == "up" then
+		yDelta = -1 * moveAmt
+	elseif direction == "down" then
+		yDelta = moveAmt
+	end
+
+	moveTimers[direction] = hs.timer.doEvery(0.05, function()
+		moveWindow(xDelta, yDelta)
+	end)
+end
+
+-- Function to stop moving the window in a direction
+function stopMoving(direction)
+	if moveTimers[direction] then
+		moveTimers[direction]:stop()
+		moveTimers[direction] = nil
+	end
+end
+
+-- Bind keys for continuous moving window
+hs.hotkey.bind({ "alt", "ctrl" }, "left", function()
+	startMoving("left")
+end, function()
+	stopMoving("left")
+end)
+hs.hotkey.bind({ "alt", "ctrl" }, "right", function()
+	startMoving("right")
+end, function()
+	stopMoving("right")
+end)
+hs.hotkey.bind({ "alt", "ctrl" }, "up", function()
+	startMoving("up")
+end, function()
+	stopMoving("up")
+end)
+hs.hotkey.bind({ "alt", "ctrl" }, "down", function()
+	startMoving("down")
+end, function()
+	stopMoving("down")
 end)
