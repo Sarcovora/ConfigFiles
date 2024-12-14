@@ -119,6 +119,10 @@ alias bat='bat -A'
 
 alias ca='conda activate'
 
+alias p='procs'
+
+alias savelife='~/LifeVault/.commit_push.bash'
+
 # tmux
 alias tl='tmux ls'
 alias tn='tmux new -s'
@@ -148,11 +152,6 @@ alias xcit='ssh -X evankuo@citrine.cs.utexas.edu'
 # ssh arch machines
 alias alpaca='ssh ek9675@3.16.7.149'
 alias dodo='ssh ek9675@52.14.97.212'
-
-# ssh csres
-alias hockey='ssh -X air_hockey@pearl-cluster.csres.utexas.edu'
-alias bisim='ssh bisim@pearl-cluster.csres.utexas.edu'
-alias poincare='ssh ekuo@poincare.csres.utexas.edu'
 
 # functions
 yy () {
@@ -191,3 +190,4 @@ PATH=~/.console-ninja/.bin:$PATH
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 # [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
