@@ -1,67 +1,72 @@
+# CodeWhisperer pre block. Keep at the top of this file.
+# [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-
-# NOTE: Commented out
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export ZSH=$HOME/.oh-my-zsh # NOTE: commented out
-
+# MacOS only
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-ZSH_THEME="powerlevel10k/powerlevel10k" # NOTE: commented out
+# Set the directory we want to store zinit and plugins
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-HYPHEN_INSENSITIVE="true" # NOTE: commented out
+# Download Zinit, if it's not there yet
+if [ ! -d "$ZINIT_HOME" ]; then
+   mkdir -p "$(dirname $ZINIT_HOME)"
+   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
 
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time # NOTE: commented out
+# Source/Load zinit
+source "${ZINIT_HOME}/zinit.zsh"
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+# Add in Powerlevel10k
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# Add in zsh plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+# Snippets (OMZP:: is name space for Oh My Zsh plugins)
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
+zinit snippet OMZP::git
+zinit snippet OMZP::conda
+zinit snippet OMZP::ssh
+zinit snippet OMZP::thefuck
+zinit snippet OMZP::command-not-found
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+# Load completions
+autoload -Uz compinit && compinit
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-plugins=(git) # NOTE: commented out
-
-source $ZSH/oh-my-zsh.sh # NOTE: commented out
-
-# zen.zsh
-# fpath+="$HOME/.zsh/zen"
-# autoload -Uz promptinit
-# promptinit
-# prompt zen
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh NOTE: uncomment this line
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+
+# preview directory's content with eza when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color $realpath'
+
+# Keybindings
+bindkey '^y' autosuggest-accept
+bindkey '^p' history-search-backward # allows search autocompletion of current prefix only
+bindkey '^n' history-search-forward
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -78,10 +83,17 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+conda config --set auto_activate_base false
+
 # history
-HISTFILE='/Users/ekuo/.zsh_history'
-HISTSIZE=9999999
+HISTFILE='/Users/ekuo/.zsh_history_zen'
+HISTSIZE=999999
 SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_find_no_dups
 
 export EDITOR='nvim'
 export VISUAL='nvim'
@@ -101,10 +113,15 @@ alias zi='__zoxide_zi'
 
 alias vim='nvim'
 alias vi='nvim'
+alias v='nvim'
 
 alias bat='bat -A'
 
 alias ca='conda activate'
+
+alias p='procs'
+
+alias savelife='~/LifeVault/.commit_push.bash'
 
 # tmux
 alias tl='tmux ls'
@@ -136,10 +153,6 @@ alias xcit='ssh -X evankuo@citrine.cs.utexas.edu'
 alias alpaca='ssh ek9675@3.16.7.149'
 alias dodo='ssh ek9675@52.14.97.212'
 
-# ssh csres
-alias hockey='ssh -X air_hockey@pearl-cluster.csres.utexas.edu'
-alias poincare='ssh ekuo@poincare.csres.utexas.edu'
-
 # functions
 yy () {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" 
@@ -151,11 +164,30 @@ yy () {
 	rm -f -- "$tmp"
 }
 
-# evals
+tt () {
+    local session
+    session=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | head -n1)
+    if [ -n "$session" ]; then
+        tmux attach-session -t "$session"
+    else
+        echo "No tmux sessions found :("
+    fi
+}
+
+# Shell Integrations
 eval "$(zoxide init zsh)"
 eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# VARS
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/nitishgupta/.mujoco/mujoco210/bin
+# export MUJOCO_PY_MJPRO_PATH=~/.mujoco/mujoco200
+# export MUJOCO_PY_MJKEY_PATH=~/.mujoco/mjkey.txt
+
 # PATH
 PATH=~/.console-ninja/.bin:$PATH
+
+# CodeWhisperer post block. Keep at the bottom of this file.
+# [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
