@@ -65,9 +65,9 @@ end) -- notes
 hs.hotkey.bind(hyper, "R", function()
 	switchToAndFromApp("com.apple.reminders")
 end) -- reminders
-hs.hotkey.bind(hyper, "T", function()
-	switchToAndFromApp("com.googlecode.iterm2")
-end) -- iterm2
+-- hs.hotkey.bind(hyper, "T", function()
+-- 	switchToAndFromApp("com.googlecode.iterm2")
+-- end) -- iterm2
 hs.hotkey.bind(hyper, "U", function()
 	switchToAndFromApp("com.apple.Music")
 end) -- apple music
@@ -91,6 +91,14 @@ hs.hotkey.bind(hyper, "Z", function()
 end) -- zotero
 
 -- NOTE: Still have G, H, I, J, S, available
+-- T is used for TOT
+
+-- show the bundleid of the currently open window
+hs.hotkey.bind(hyper, "`", function()
+	local bundleID = hs.window.focusedWindow():application():bundleID()
+	hs.alert.show(bundleID)
+	hs.pasteboard.setContents(bundleID)
+end)
 
 -- Move window function
 function moveWindow(xDelta, yDelta)
@@ -105,63 +113,17 @@ function moveWindow(xDelta, yDelta)
 	win:setFrame(f)
 end
 
--- Create timers to allow continuous movement
-local moveTimers = {
-	left = nil,
-	right = nil,
-	up = nil,
-	down = nil,
-}
-
--- Function to start moving window in a direction continuously
-function startMoving(direction)
-	if moveTimers[direction] then
-		return
-	end -- Prevent multiple timers for the same direction
-
-	local xDelta, yDelta = 0, 0
-	local moveAmt = 15
-	if direction == "left" then
-		xDelta = -1 * moveAmt
-	elseif direction == "right" then
-		xDelta = moveAmt
-	elseif direction == "up" then
-		yDelta = -1 * moveAmt
-	elseif direction == "down" then
-		yDelta = moveAmt
-	end
-
-	moveTimers[direction] = hs.timer.doEvery(0.05, function()
-		moveWindow(xDelta, yDelta)
-	end)
-end
-
--- Function to stop moving the window in a direction
-function stopMoving(direction)
-	if moveTimers[direction] then
-		moveTimers[direction]:stop()
-		moveTimers[direction] = nil
-	end
-end
-
--- Bind keys for continuous moving window
+-- Bind keys for moving window
+local moveAmt = 15
 hs.hotkey.bind({ "alt", "ctrl" }, "left", function()
-	startMoving("left")
-end, function()
-	stopMoving("left")
+	moveWindow(-1 * moveAmt, 0)
 end)
 hs.hotkey.bind({ "alt", "ctrl" }, "right", function()
-	startMoving("right")
-end, function()
-	stopMoving("right")
+	moveWindow(moveAmt, 0)
 end)
 hs.hotkey.bind({ "alt", "ctrl" }, "up", function()
-	startMoving("up")
-end, function()
-	stopMoving("up")
+	moveWindow(0, -1 * moveAmt)
 end)
 hs.hotkey.bind({ "alt", "ctrl" }, "down", function()
-	startMoving("down")
-end, function()
-	stopMoving("down")
+	moveWindow(0, moveAmt)
 end)
