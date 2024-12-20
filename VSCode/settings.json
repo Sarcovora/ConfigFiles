@@ -2,6 +2,19 @@
   // Open json editor for settings
   "workbench.settings.editor": "json",
 
+  "editor.rulers": [
+    80,
+    70,
+  ],
+
+  // ignore git-ignored files when searching
+  "search.useIgnoreFiles": true,
+
+  // glennraya vscode-settings-json
+  "window.newWindowDimensions": "inherit",
+  "editor.snippetSuggestions": "top",
+
+
   // Theme
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.iconTheme": "catppuccin-mocha",
@@ -67,12 +80,11 @@
   "editor.guides.bracketPairs": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.scrollbar.horizontal": "auto",
-  "editor.stickyScroll.enabled": true,
 
   // TODO Tree
   "todo-tree.highlights.defaultHighlight": {
     "icon": "alert",
-    "gutterIcon": true
+    "gutterIcon": true,
   },
   "todo-tree.highlights.customHighlight": {
     "TODO": {
@@ -88,9 +100,12 @@
     "QUESTION": {
       "icon": "light-bulb",
       "iconColour": "yellow"
+    },
+    "NOTE": {
+      "iconColour": "blue"
     }
   },
-  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "QUESTION"],
+  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "QUESTION", "NOTE"],
 
   // APC
   // "apc.activityBar": {
@@ -149,14 +164,16 @@
     "markdown": true,
     "scminput": true,
     "yaml": true,
-    "python": true,
-    "typescriptreact": true
+    "python": false,
+    "typescriptreact": true,
+    "javascript": true,
+    "json": true,
+    "c": false
   },
   "git.confirmSync": false,
   "workbench.startupEditor": "none",
   "files.autoSave": "onFocusChange",
   "workbench.tree.renderIndentGuides": "always",
-  "editor.minimap.enabled": false,
   "background.windowBackgrounds": [],
   "background.backgroundOpacity": [0.9, 0.9, 0.9, 0.9],
   "[python]": {
@@ -269,8 +286,8 @@
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
-  "C_Cpp.clang_format_style": "Chromium",
-  "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: true, ColumnLimit: 150, AccessModifierOffset: -4, NamespaceIndentation: All }",
+  // "C_Cpp.clang_format_style": "Chromium",
+  // "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: true, ColumnLimit: 150, AccessModifierOffset: -4, NamespaceIndentation: All }",
   "update.mode": "manual",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -287,5 +304,11 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "vim.smartRelativeLine": true,
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "makefile.configureOnOpen": true,
+  "files.associations": {
+    "*.c": "c"
+  },
+  "editor.stickyScroll.enabled": true,
+  "editor.minimap.enabled": false
 }
