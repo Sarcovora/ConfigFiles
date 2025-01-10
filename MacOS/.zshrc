@@ -103,7 +103,6 @@ alias l='eza -lah'
 alias la='eza -lAh'
 alias ll='eza -lh'
 alias ls='eza -G'
-alias lsa='eza -lah'
 
 # program aliases
 alias lg='lazygit'
@@ -121,37 +120,18 @@ alias ca='conda activate'
 
 alias p='procs'
 
+alias nf='neofetch'
+
 alias savelife='~/LifeVault/.commit_push.bash'
+alias lifepull='~/LifeVault/.pull.bash'
+alias lgst='~/LifeVault/.gstatus.bash'
+
+alias src='source ~/.zshrc'
 
 # tmux
 alias tl='tmux ls'
 alias tn='tmux new -s'
 alias ta='tmux a -t'
-
-# ssh cereal
-alias trix='ssh evankuo@trix.cs.utexas.edu'
-alias xtrix='ssh -X evankuo@trix.cs.utexas.edu'
-
-alias frost='ssh evankuo@frosted-flakes.cs.utexas.edu'
-alias xfrost='ssh -X evankuo@frosted-flakes.cs.utexas.edu'
-
-alias kix='ssh evankuo@kix.cs.utexas.edu'
-alias xkix='ssh -X evankuo@kix.cs.utexas.edu'
-
-alias onyx='ssh evankuo@onyx.cs.utexas.edu'
-alias xonyx='ssh -X evankuo@onyx.cs.utexas.edu'
-
-alias chess='ssh evankuo@chess.cs.utexas.edu'
-alias xchess='ssh -X evankuo@chess.cs.utexas.edu'
-
-alias citrine='ssh evankuo@citrine.cs.utexas.edu'
-alias xcitrine='ssh -X evankuo@citrine.cs.utexas.edu'
-alias cit='ssh evankuo@citrine.cs.utexas.edu'
-alias xcit='ssh -X evankuo@citrine.cs.utexas.edu'
-
-# ssh arch machines
-alias alpaca='ssh ek9675@3.16.7.149'
-alias dodo='ssh ek9675@52.14.97.212'
 
 # functions
 yy () {
