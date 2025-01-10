@@ -41,6 +41,9 @@ end) -- apple mail
 hs.hotkey.bind(hyper, "F", function()
 	switchToAndFromApp("com.apple.finder")
 end) -- finder
+hs.hotkey.bind(hyper, "G", function()
+	switchToAndFromApp("com.mitchellh.ghostty")
+end) -- ghostty
 hs.hotkey.bind(hyper, "K", function()
 	switchToAndFromApp("net.ankiweb.dtop")
 end) -- anki
@@ -77,9 +80,9 @@ end) -- vscode
 -- hs.hotkey.bind(hyper, "W", function()
 -- 	switchToAndFromApp("dev.warp.Warp-Stable")
 -- end) -- warp
-hs.hotkey.bind(hyper, "W", function()
-	switchToAndFromApp("com.github.wez.wezterm")
-end) -- wezterm
+-- hs.hotkey.bind(hyper, "W", function()
+-- 	switchToAndFromApp("com.github.wez.wezterm")
+-- end) -- wezterm
 hs.hotkey.bind(hyper, "X", function()
 	switchToAndFromApp("com.apple.findmy")
 end) -- chat gpt
@@ -90,7 +93,7 @@ hs.hotkey.bind(hyper, "Z", function()
 	switchToAndFromApp("org.zotero.zotero")
 end) -- zotero
 
--- NOTE: Still have G, H, I, J, S, available
+-- NOTE: Still have H, I, J, S, W available
 -- T is used for TOT
 
 -- show the bundleid of the currently open window
